@@ -4,3 +4,6 @@
 [submodule "lib/orakl"]
 	path = lib/orakl
 	url = https://github.com/Bisonai/orakl
+[submodule "lib/foundry-devops"]
+	path = lib/foundry-devops
+	url = https://github.com/Cyfrin/foundry-devops
