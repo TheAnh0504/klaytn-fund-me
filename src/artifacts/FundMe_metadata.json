@@ -1,0 +1,245 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "priceFeed",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "FundMe__NotOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "MINIMUM_USD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cheaperWithdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fund",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "fundingAddress",
+						"type": "address"
+					}
+				],
+				"name": "getAddressToAmountFunded",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDecimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDescription",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getFunder",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPriceFeed",
+				"outputs": [
+					{
+						"internalType": "contract IAggregator",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Patrick Collins",
+			"details": "This implements price feeds as our library",
+			"kind": "dev",
+			"methods": {
+				"getAddressToAmountFunded(address)": {
+					"params": {
+						"fundingAddress": "the address of the funder"
+					},
+					"returns": {
+						"_0": "the amount funded"
+					}
+				},
+				"getFunder(uint256)": {
+					"params": {
+						"index": "the index of the funder"
+					},
+					"returns": {
+						"_0": "the address of the funder"
+					}
+				}
+			},
+			"title": "A sample Funding Contract",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"fund()": {
+					"notice": "Funds our contract based on the KLAY/USDT price from Orakl"
+				},
+				"getAddressToAmountFunded(address)": {
+					"notice": "Gets the amount that an address has funded"
+				},
+				"getDecimals()": {
+					"notice": "Gets the decimals of the price feed"
+				},
+				"getDescription()": {
+					"notice": "Gets the description of the price feed"
+				},
+				"getFunder(uint256)": {
+					"notice": "Gets the funder at a specific index"
+				},
+				"getOwner()": {
+					"notice": "Gets the owner of the contract"
+				},
+				"getPriceFeed()": {
+					"notice": "Gets the price feed"
+				}
+			},
+			"notice": "This contract is for creating a sample funding contract",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/FundMe.sol": "FundMe"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@bisonai/orakl-contracts/src/v0.1/interfaces/IAggregator.sol": {
+			"keccak256": "0x83c1e2279685e749dde5d0070f90a7adcafa95c57facace6a1f0e3039f83d005",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6cdc3a890e4cd0597bdd9e7ea656003282df9466723ad7c2f1996a13f464f86a",
+				"dweb:/ipfs/QmYWjL6oFQGYFPBhG45d9J2eWrQNRp2ERdR2xQg2xHrEdW"
+			]
+		},
+		"src/FundMe.sol": {
+			"keccak256": "0xdb215eff8378470643b056e29176979c92996e9fc4c6365e03990d3fc6314755",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d660fa5f95f2d7002f24a52b7783eb49900bf65d37490ddb9c01c58ec9a0d1b8",
+				"dweb:/ipfs/QmaxTkqUM1wEYMovWf1fZrSa5SoPQvo6CUWsg1BSRZMBBT"
+			]
+		},
+		"src/PriceConverter.sol": {
+			"keccak256": "0x8248c7096fbea3f5d093dee6a2ff0b610c584859383a4537964e67e5fb92b70d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1bede11f6eb29a9849d7d219df29b7fee1090992b418d47b6b6451857d80b953",
+				"dweb:/ipfs/QmaiaNbZ1wgsH4jpD4LkAiTG1ZqWo85FS3PmrwLZgqYRDu"
+			]
+		}
+	},
+	"version": 1
+}
